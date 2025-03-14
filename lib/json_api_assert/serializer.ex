@@ -115,7 +115,6 @@ defmodule JsonApiAssert.Serializer do
 
   defp serialize_value(%{__struct__: DateTime} = value) do
     value
-    |> force_microseconds_precision
     |> DateTime.to_iso8601
   end
   defp serialize_value(%{__struct__: Ecto.DateTime} = value) do
